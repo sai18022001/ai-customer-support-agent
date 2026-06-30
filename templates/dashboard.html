@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Support Agent - Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">AI Support Agent</div>
+        <div class="nav-links">
+            <a href="/" class="nav-link">Chat</a>
+            <a href="/dashboard" class="nav-link active">Dashboard</a>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <h2 class="dashboard-title">Analytics Dashboard</h2>
+
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-value" id="totalSessions">-</div>
+                <div class="metric-label">Total Sessions</div>
+            </div>
+            <div class="metric-card card-success">
+                <div class="metric-value" id="aiResolved">-</div>
+                <div class="metric-label">AI Resolved</div>
+            </div>
+            <div class="metric-card card-warning">
+                <div class="metric-value" id="escalated">-</div>
+                <div class="metric-label">Escalated</div>
+            </div>
+            <div class="metric-card card-info">
+                <div class="metric-value" id="resolutionRate">-</div>
+                <div class="metric-label">Resolution Rate</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value" id="avgSatisfaction">-</div>
+                <div class="metric-label">Avg Satisfaction</div>
+            </div>
+            <div class="metric-card card-active">
+                <div class="metric-value" id="activeSessions">-</div>
+                <div class="metric-label">Active Sessions</div>
+            </div>
+        </div>
+
+        <div class="charts-grid">
+            <div class="chart-card">
+                <h3 class="chart-title">Intent Distribution</h3>
+                <div id="intentChart" class="intent-chart"></div>
+            </div>
+            <div class="chart-card">
+                <h3 class="chart-title">Resolution Overview</h3>
+                <div id="resolutionChart" class="resolution-chart"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/dashboard.js"></script>
+</body>
+</html>

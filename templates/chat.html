@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Support Agent - Chat</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">AI Support Agent</div>
+        <div class="nav-links">
+            <a href="/" class="nav-link active">Chat</a>
+            <a href="/dashboard" class="nav-link">Dashboard</a>
+        </div>
+    </nav>
+
+    <div class="chat-container">
+        <div class="chat-sidebar">
+            <h3>Customer</h3>
+            <select id="customerSelect" class="customer-select">
+                <option value="">Select a customer...</option>
+            </select>
+            <div id="customerInfo" class="customer-info" style="display:none;">
+                <div class="info-row"><span class="info-label">Name</span><span id="custName"></span></div>
+                <div class="info-row"><span class="info-label">Email</span><span id="custEmail"></span></div>
+                <div class="info-row"><span class="info-label">Tier</span><span id="custTier" class="badge"></span></div>
+                <div class="info-row"><span class="info-label">Company</span><span id="custCompany"></span></div>
+            </div>
+            <button id="newSessionBtn" class="btn btn-secondary" style="margin-top:16px;">New Session</button>
+        </div>
+
+        <div class="chat-main">
+            <div id="chatMessages" class="chat-messages">
+                <div class="empty-state">
+                    <div class="empty-icon">&#x1f916;</div>
+                    <h3>AI Customer Support Agent</h3>
+                    <p>Select a customer and start a conversation</p>
+                </div>
+            </div>
+
+            <div id="escalationBanner" class="escalation-banner" style="display:none;">
+                Escalated to human agent
+            </div>
+
+            <div class="chat-input-area">
+                <input type="text" id="messageInput" class="message-input" placeholder="Type your message..." disabled>
+                <button id="sendBtn" class="btn btn-primary" disabled>Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/chat.js"></script>
+</body>
+</html>
